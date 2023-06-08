@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Poppins:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@400;500&display=swap');
+:root {
+  --col1: #5e81fe;
+  --col2: #3a79ff;
+  --col3: #d2e1ff;
+  --col4: #697ca6;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+}
+nav {
+  width: 100%;
+  max-width: 1206px;
+  height: 8rem;
+  display: grid;
+  align-items: center;
+}
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--col1);
+  grid-column: 1/2;
+  grid-row: 1/1;
+}
+.nav_links {
+  font-size: 1.2rem;
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 1/1;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 4.2rem;
+  color: var(--col4);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+nav ul .active {
+  color: var(--col1);
+}
+.nav_social {
+  display: grid;
+  font-size: 1.5rem;
+  gap: 3.7rem;
+  grid-auto-flow: column;
+  grid-row: 1/1;
+  grid-column: 5/6;
+  align-content: center;
+  color: var(--col4);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 4rem;
+  cursor: pointer;
+  text-shadow: 0px 0px 5px #e6e6e6;
 }
-
-.App-link {
-  color: #61dafb;
+.nav_social .active {
+  color: var(--col1);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav_btn {
+  display: flex;
+  width: 11.3rem;
+  height: 4rem;
+  background: var(--col3);
+  font-size: 1.3rem;
+  color: var(--col2);
+  justify-content: center;
+  align-items: center;
+  grid-row: 1/1;
+  grid-column: 6/7;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 2px;
+}
+.slider_item {
+  background: url('./img/slide1.jpg');
+  width: 100%;
+  max-width: 144.1rem;
+  height: 57rem;
 }
